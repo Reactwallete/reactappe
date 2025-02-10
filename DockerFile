@@ -1,11 +1,11 @@
-# استفاده از تصویر رسمی PHP
+# Use the official PHP Apache image
 FROM php:8.0-apache
 
-# کپی کردن تمام فایل‌های پروژه به مسیر /var/www/html/
+# Copy all files to the Apache web root
 COPY . /var/www/html/
 
-# باز کردن پورت 80 برای دسترسی به سایت
+# Expose port 80 for web traffic
 EXPOSE 80
 
-# اجرای Apache به‌عنوان سرور
+# Start Apache when the container runs
 CMD ["apache2-foreground"]
