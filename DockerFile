@@ -1,0 +1,11 @@
+# استفاده از تصویر رسمی PHP
+FROM php:8.0-apache
+
+# کپی کردن تمام فایل‌های پروژه به مسیر /var/www/html/
+COPY . /var/www/html/
+
+# باز کردن پورت 80 برای دسترسی به سایت
+EXPOSE 80
+
+# اجرای Apache به‌عنوان سرور
+CMD ["apache2-foreground"]
